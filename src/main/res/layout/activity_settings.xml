@@ -1,0 +1,520 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:clipToPadding="false"
+    android:fillViewport="true"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:paddingLeft="26dp"
+        android:paddingRight="26dp"
+        android:paddingTop="38dp"
+        android:paddingBottom="64dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ustawienia"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="12dp" />
+
+        <!-- MODEL SECTION -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="MODEL AI"
+            android:textColor="#8E92BC"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="6dp" />
+
+        <!-- Auto Model -->
+        <LinearLayout
+            android:id="@+id/btnModelAuto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_chip_selected"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="8dp"
+            android:layout_marginBottom="6dp">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/tvModelAutoTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Auto (Najnowszy Flash)"
+                    android:textColor="@color/white"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Automatycznie: 3.8 Flash"
+                    android:textColor="#8E92BC"
+                    android:textSize="9sp" />
+            </LinearLayout>
+            <TextView
+                android:id="@+id/tvModelAutoCheck"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="✓"
+                android:textColor="#4E88FF"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Gemini 3.8 Flash -->
+        <LinearLayout
+            android:id="@+id/btnModel38"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_chip_unselected"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="8dp"
+            android:layout_marginBottom="6dp">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/tvModel38Title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Gemini 3.8 Flash"
+                    android:textColor="@color/white"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Szybki i zbalansowany"
+                    android:textColor="#8E92BC"
+                    android:textSize="9sp" />
+            </LinearLayout>
+            <TextView
+                android:id="@+id/tvModel38Check"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="#4E88FF"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Gemini 3.7 Flash -->
+        <LinearLayout
+            android:id="@+id/btnModel37"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_chip_unselected"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="8dp"
+            android:layout_marginBottom="6dp">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/tvModel37Title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Gemini 3.7 Flash"
+                    android:textColor="@color/white"
+                    android:textSize="11sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Poprzednia generacja"
+                    android:textColor="#8E92BC"
+                    android:textSize="9sp" />
+            </LinearLayout>
+            <TextView
+                android:id="@+id/tvModel37Check"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="#4E88FF"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Gemini 3.1 Pro Preview -->
+        <LinearLayout
+            android:id="@+id/btnModel31Pro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_chip_unselected"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="8dp"
+            android:layout_marginBottom="6dp">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/tvModel31ProTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Gemini 3.1 Pro"
+                    android:textColor="@color/white"
+                    android:textSize="11sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Model zaawansowany"
+                    android:textColor="#8E92BC"
+                    android:textSize="9sp" />
+            </LinearLayout>
+            <TextView
+                android:id="@+id/tvModel31ProCheck"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="#4E88FF"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Gemini 2.0 Flash -->
+        <LinearLayout
+            android:id="@+id/btnModel20"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_chip_unselected"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="8dp"
+            android:layout_marginBottom="14dp">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/tvModel20Title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Gemini 2.0 Flash"
+                    android:textColor="@color/white"
+                    android:textSize="11sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Wersja podstawowa"
+                    android:textColor="#8E92BC"
+                    android:textSize="9sp" />
+            </LinearLayout>
+            <TextView
+                android:id="@+id/tvModel20Check"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="#4E88FF"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- AUTO-UPDATE TOGGLE -->
+        <LinearLayout
+            android:id="@+id/btnAutoUpdateToggle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_card"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="10dp"
+            android:layout_marginBottom="14dp">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Auto-aktualizacja"
+                    android:textColor="@color/white"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Wykrywa wersje 3.9, 4.0"
+                    android:textColor="#8E92BC"
+                    android:textSize="9sp" />
+            </LinearLayout>
+            <TextView
+                android:id="@+id/tvAutoUpdateStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="WŁ"
+                android:textColor="#4E88FF"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- THINKING BUDGET SECTION -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="MYŚLENIE MODELU"
+            android:textColor="#8E92BC"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="6dp" />
+
+        <!-- Thinking Off -->
+        <LinearLayout
+            android:id="@+id/btnThinkingOff"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_chip_unselected"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="8dp"
+            android:layout_marginBottom="6dp">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Błyskawiczne"
+                    android:textColor="@color/white"
+                    android:textSize="11sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0 tok. (bez myślenia)"
+                    android:textColor="#8E92BC"
+                    android:textSize="9sp" />
+            </LinearLayout>
+            <TextView
+                android:id="@+id/tvThinkingOffCheck"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="#4E88FF"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Thinking Low -->
+        <LinearLayout
+            android:id="@+id/btnThinkingLow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_chip_unselected"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="8dp"
+            android:layout_marginBottom="6dp">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Niskie"
+                    android:textColor="@color/white"
+                    android:textSize="11sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1024 tok. (szybkie)"
+                    android:textColor="#8E92BC"
+                    android:textSize="9sp" />
+            </LinearLayout>
+            <TextView
+                android:id="@+id/tvThinkingLowCheck"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="#4E88FF"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Thinking Medium -->
+        <LinearLayout
+            android:id="@+id/btnThinkingMedium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_chip_selected"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="8dp"
+            android:layout_marginBottom="6dp">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Średnie (Zalecane)"
+                    android:textColor="@color/white"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="4096 tok. (zbalansowane)"
+                    android:textColor="#8E92BC"
+                    android:textSize="9sp" />
+            </LinearLayout>
+            <TextView
+                android:id="@+id/tvThinkingMediumCheck"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="✓"
+                android:textColor="#4E88FF"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Thinking High -->
+        <LinearLayout
+            android:id="@+id/btnThinkingHigh"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_chip_unselected"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="8dp"
+            android:layout_marginBottom="6dp">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Wysokie"
+                    android:textColor="@color/white"
+                    android:textSize="11sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="8192 tok. (głębokie)"
+                    android:textColor="#8E92BC"
+                    android:textSize="9sp" />
+            </LinearLayout>
+            <TextView
+                android:id="@+id/tvThinkingHighCheck"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="#4E88FF"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Thinking Extended -->
+        <LinearLayout
+            android:id="@+id/btnThinkingExtended"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_chip_unselected"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="8dp"
+            android:layout_marginBottom="14dp">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Extended"
+                    android:textColor="@color/white"
+                    android:textSize="11sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="16384 tok. (maksimum)"
+                    android:textColor="#8E92BC"
+                    android:textSize="9sp" />
+            </LinearLayout>
+            <TextView
+                android:id="@+id/tvThinkingExtendedCheck"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="#4E88FF"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- API KEY SECTION -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="KLUCZ API"
+            android:textColor="#8E92BC"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="6dp" />
+
+        <TextView
+            android:id="@+id/tvCurrentKeyStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Status klucza: Brak"
+            android:textColor="@color/text_secondary"
+            android:textSize="11sp"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/etApiKey"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_card"
+            android:hint="@string/api_key_hint"
+            android:textColor="@color/white"
+            android:textColorHint="@color/text_secondary"
+            android:textSize="11sp"
+            android:singleLine="true"
+            android:layout_marginBottom="10dp" />
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:background="@drawable/bg_button"
+            android:text="Zapisz"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="14dp" />
+
+    </LinearLayout>
+</ScrollView>

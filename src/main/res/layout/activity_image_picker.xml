@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:paddingLeft="24dp"
+    android:paddingRight="24dp"
+    android:paddingTop="32dp"
+    android:paddingBottom="52dp"
+    android:clipToPadding="false">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Galeria zdjęć"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="10dp" />
+
+    <TextView
+        android:id="@+id/tvEmpty"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="Brak zrzutów ekranu lub zdjęć w pamięci zegarka."
+        android:textColor="@color/text_secondary"
+        android:textSize="11sp"
+        android:visibility="gone" />
+
+    <ListView
+        android:id="@+id/lvImages"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="@null"
+        android:dividerHeight="8dp"
+        android:clipToPadding="false"
+        android:scrollbars="none" />
+
+</LinearLayout>

@@ -1,0 +1,9 @@
+.DS_Store
+build/classes/
+build/dex/
+build/gen/
+build/compiled_res/
+build/compiled_res.zip
+build/apk/unaligned.apk
+build/apk/aligned.apk
+*.idsig

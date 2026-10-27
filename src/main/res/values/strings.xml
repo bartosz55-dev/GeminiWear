@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Gemini</string>
+    <string name="listening">Słucham...</string>
+    <string name="thinking">Gemini myśli...</string>
+    <string name="tap_to_speak">Dotknij, aby mówić</string>
+    <string name="tap_to_retry">Dotknij, aby powtórzyć</string>
+    <string name="settings_title">Ustawienia</string>
+    <string name="api_key_hint">Wklej klucz Gemini API</string>
+    <string name="save">Zapisz</string>
+    <string name="need_api_key">Brak klucza Gemini API.\nDotknij zębatki lub wyślij przez ADB.</string>
+    <string name="mic_permission_needed">Wymagane uprawnienie do mikrofonu.</string>
+    <string name="error_network">Błąd połączenia z siecią Wi-Fi.</string>
+    <string name="error_recognition">Nie zrozumiałem. Dotknij, aby spróbować ponownie.</string>
+</resources>

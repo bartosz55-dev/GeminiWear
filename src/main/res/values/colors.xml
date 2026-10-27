@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="text_secondary">#AAAAAA</color>
+    <color name="gemini_blue">#4E88FF</color>
+    <color name="gemini_purple">#9B51E0</color>
+    <color name="gemini_gradient_start">#1A2A6C</color>
+    <color name="gemini_gradient_mid">#B21F1F</color>
+    <color name="gemini_gradient_end">#FDBB2D</color>
+    <color name="card_bg">#18191C</color>
+    <color name="card_border">#2C2D35</color>
+    <color name="btn_accent">#3875FF</color>
+</resources>

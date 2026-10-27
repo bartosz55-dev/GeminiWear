@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:keepScreenOn="true">
+
+    <!-- Subtle Ambient Glow -->
+    <ImageView
+        android:id="@+id/ivGlowOrb"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_gravity="center"
+        android:src="@drawable/bg_orb"
+        android:alpha="0.18" />
+
+    <!-- Main Container with Round Wear OS Padding -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:paddingLeft="14dp"
+        android:paddingRight="14dp"
+        android:paddingTop="24dp"
+        android:paddingBottom="12dp">
+
+        <!-- Top Header Bar with Clickable Model Badge -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="4dp"
+            android:paddingEnd="4dp"
+            android:layout_marginBottom="4dp">
+
+            <!-- Settings -->
+            <ImageView
+                android:id="@+id/btnSettings"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:padding="3dp"
+                android:src="@drawable/ic_settings" />
+
+            <!-- Centered Clickable Model & Thinking Badge -->
+            <LinearLayout
+                android:id="@+id/btnHeaderModelBadge"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="6dp"
+                android:background="@drawable/bg_badge_model"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="11dp"
+                    android:layout_height="11dp"
+                    android:src="@drawable/ic_gemini"
+                    android:layout_marginEnd="4dp" />
+
+                <TextView
+                    android:id="@+id/tvHeaderModel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3.8 Flash"
+                    android:textColor="@color/white"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    android:singleLine="true" />
+
+                <TextView
+                    android:id="@+id/tvHeaderThinking"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
+                    android:text="• Średnie"
+                    android:textColor="#8E92BC"
+                    android:textSize="9sp"
+                    android:singleLine="true" />
+            </LinearLayout>
+
+            <!-- New Chat / Clear History -->
+            <ImageView
+                android:id="@+id/btnClearChat"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:padding="3dp"
+                android:src="@drawable/ic_trash" />
+        </LinearLayout>
+
+        <!-- Attached Image Preview Bar -->
+        <LinearLayout
+            android:id="@+id/layoutAttachedImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="@drawable/bg_card"
+            android:padding="3dp"
+            android:layout_marginTop="2dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/ivAttachedPreview"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Zdjęcie dołączone"
+                android:textColor="@color/white"
+                android:textSize="9sp"
+                android:layout_marginStart="4dp" />
+
+            <ImageView
+                android:id="@+id/btnRemoveImage"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginStart="4dp"
+                android:src="@drawable/ic_close" />
+        </LinearLayout>
+
+        <!-- Chat History Scroll View -->
+        <ScrollView
+            android:id="@+id/scrollChat"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            android:clipToPadding="false"
+            android:fillViewport="true"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:id="@+id/llChatMessages"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:clipToPadding="false"
+                android:paddingBottom="45dp"
+                android:gravity="bottom">
+
+                <!-- Welcome / Empty Placeholder -->
+                <TextView
+                    android:id="@+id/tvEmptyPrompt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginTop="16dp"
+                    android:text="W czym mogę pomóc?\nDotknij mikrofonu lub klawiatury."
+                    android:textColor="@color/text_secondary"
+                    android:textSize="11sp" />
+
+            </LinearLayout>
+        </ScrollView>
+
+        <!-- Inline Typing Bar (hidden by default) -->
+        <LinearLayout
+            android:id="@+id/layoutTextInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:visibility="gone"
+            android:layout_marginBottom="4dp">
+
+            <EditText
+                android:id="@+id/etPromptInput"
+                android:layout_width="0dp"
+                android:layout_height="34dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_card"
+                android:hint="Wpisz pytanie..."
+                android:textColor="@color/white"
+                android:textColorHint="@color/text_secondary"
+                android:textSize="11sp"
+                android:singleLine="true"
+                android:imeOptions="actionSend"
+                android:padding="6dp" />
+
+            <ImageView
+                android:id="@+id/btnSendText"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="4dp"
+                android:background="@drawable/bg_button"
+                android:padding="6dp"
+                android:src="@drawable/ic_send" />
+        </LinearLayout>
+
+        <!-- Bottom Action Bar with responsive tactile buttons -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <!-- Mic Action -->
+            <ImageView
+                android:id="@+id/btnActionMic"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:padding="6dp"
+                android:background="@drawable/bg_card"
+                android:src="@drawable/ic_mic" />
+
+            <!-- Keyboard Action -->
+            <ImageView
+                android:id="@+id/btnActionKeyboard"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="10dp"
+                android:padding="6dp"
+                android:background="@drawable/bg_card"
+                android:src="@drawable/ic_keyboard" />
+
+            <!-- Photo Action -->
+            <ImageView
+                android:id="@+id/btnActionPhoto"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="10dp"
+                android:padding="6dp"
+                android:background="@drawable/bg_card"
+                android:src="@drawable/ic_image" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>
